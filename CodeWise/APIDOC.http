@@ -1,0 +1,42 @@
+#API CALLING FOR DISPLAY QUESTIONS
+###
+GET  http://127.0.0.1:8000/question/
+Accept:application/json
+
+###
+POST http://127.0.0.1:8000/question/
+Content-Type:application/json
+
+{
+    
+  "title": "Write a Python program to check whether a number is even or odd.",
+  "language": "python",
+  "difficulty_level": "easy",
+  "notes": "Use the modulo operator (%) to check whether a number is divisible by 2.",
+  "sample_input": "7",
+  "sample_output": "Odd",
+  "topic": "Conditional Statements",
+  "is_active": true
+}
+
+###
+GET http://127.0.0.1:8000/question/2/
+Accept:application/json
+
+###
+PUT http://127.0.0.1:8000/question/6/
+Content-Type:application/json
+
+{
+  "title": "Write a Python program to find the sum of all elements in a list.",
+  "language": "python",
+  "difficulty_level": "medium",
+  "notes": "Calculate the total of all numbers in the list.",
+  "sample_input": "[10, 20, 30, 40]",
+  "sample_output": "100",
+  "topic": "Lists",
+  "is_active": true
+}
+
+###
+DELETE http://127.0.0.1:8000/question/2/
